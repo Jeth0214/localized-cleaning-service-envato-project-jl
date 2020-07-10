@@ -1,0 +1,253 @@
+/* Imported 'Work Sans' font from https://fonts.google.com/ */
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+/* import font family */
+@font-face {
+  font-family: cotham;
+  src: url("../assets/Cotham-master/CothamSans.ufo");
+}
+
+/* our app css variables */
+:root {
+  --primary-color: #5acd32;
+  --secondary-color: #2d1e2f;
+  --bg-color: #514663;
+  --bg-nav-color: #f9f9f9;
+}
+
+/*Global Styles */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+/* Buttons */
+
+.btn-outline {
+  color: var(--primary-color);
+  font-weight: 700;
+  border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-fill {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-fill:hover {
+  color: #ffffff;
+  background-color: rgba(90, 205, 50, 0.6);
+}
+
+/* Cards */
+.card img {
+  max-height: 600px;
+}
+
+/* titles */
+.card-title,
+.title {
+  font-weight: 600;
+}
+
+.staff {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 4rem 0 2rem;
+}
+
+/* Navbar */
+#mainNav {
+  background-color: var(--bg-nav-color);
+}
+
+.current {
+  color: var(--primary-color) !important;
+}
+
+.fa-bars {
+  color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+  color: var(--primary-color) !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--secondary-color);
+}
+
+#mainNav .navbar-brand {
+  transition: font-size 0.3s ease-in-out;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+#navbarNav a {
+  color: var(--secondary-color);
+  transition: color 0.3s ease-in-out;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+#navbarNav a:hover {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.nav-item {
+  margin: 1rem 1.5rem;
+}
+
+.navbar .nav-item > .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.navbar-dark .navbar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#mainNav.navbar-shrink {
+  background-color: var(--bg-nav-color);
+  border-bottom: 3px solid var(--primary-color);
+  max-width: 1440px;
+  margin: 0 auto;
+  z-index: 2;
+}
+#mainNav.navbar-shrink .navbar-brand {
+  font-size: 1.3em;
+}
+#mainNav.navbar-shrink .navbar-link {
+  font-size: 1.3em;
+}
+
+#mainNav.navbar-shrink .navbar-brand svg,
+#mainNav.navbar-shrink .navbar-brand img {
+  height: 1.2rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .nav-item {
+    margin: 1rem 0.9rem;
+  }
+  .btn-navbar {
+    margin-left: 0.08rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #mainNav {
+    background-color: transparent;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  }
+  .nav-item {
+    margin: 1rem 1.5rem;
+  }
+  .btn-navbar {
+    margin-left: 1rem;
+  }
+}
+
+/* Home Section */
+
+#our-team-section {
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#our-team-section .inner {
+  max-width: 1000px;
+  line-height: 28px;
+}
+
+.inner h1 {
+  font-weight: 900;
+}
+
+/* Jumbotron section */
+#jumbotron {
+  margin: 6rem auto;
+}
+.jumbotron {
+  color: #ffffff;
+  height: 350px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* footer */
+footer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  border-top: 0.5px solid var(--secondary-color);
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 80px;
+}
+.footer-text {
+  font-size: 0.8em;
+  letter-spacing: 0.0074em;
+}
+.footer-text a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Back to top button*/
+
+.back-to-top {
+  position: fixed;
+  color: var(--primary-color);
+  bottom: 25px;
+  right: 25px;
+  font-size: 3.5rem;
+  z-index: 100;
+}
+
+.back-to-top .backIcon {
+  background-color: white;
+  border: 2x solid var(--primary-color);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.back-to-top .backIcon:hover {
+  color: white;
+  background-color: var(--primary);
+}
+
+.back-to-top:hover .backIcon {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.back-to-top .backIcon:active {
+  color: white;
+  background-color: var(--primary-color);
+}
